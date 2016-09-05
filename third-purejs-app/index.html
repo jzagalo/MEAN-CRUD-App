@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Minimal JS front-end App Example</title>
+  <link rel="stylesheet" href="semantic/semantic.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,400italic' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="css/custom.css">
+    <script src="lib/browserShims.js"></script>
+    <script src="lib/util.js"></script>
+    <script src="lib/errorTypes.js"></script>
+    <script src="lib/Enumeration.js"></script>
+    <script src="src/ctrl/initialize.js"></script>
+    <script src="src/model/Book.js"></script>  
+    
+</head>
+<body>
+<div class="ui container"> 
+
+  <h1 class="ui center aligned dividing header">Book Administration</h1>
+
+  <h2 class="ui center aligned header"> JavaScript front-end App</h2>
+  <p class="ui  small center aligned header">This app supports the following operations:</p>
+   
+        <ul class=" ui center aligned list" id="List">
+            <li class="ui vertical item  buttons">
+                <a href="listBooks.html">
+                  <button type="button" class="ui red button">List all books</button>
+                </a>
+            </li>
+            <li class="ui vertical item buttons">
+                <a href="createBook.html">
+                     <button type="button" class="ui yellow button">Add a new book</button>
+                </a>
+            </li>
+            <li  class="ui vertical item buttons">
+                <a href="updateBook.html"><button type="button" class="ui olive button">Update a book</button></a>
+            </li>
+            <li class="ui vertical item buttons">
+                <a href="deleteBook.html">
+                    <button type="button" class="ui orange button">Delete a book</button></a>
+            </li>
+            <li class="ui vertical item buttons">
+                  <button type="button" class="ui teal button" onclick="Book.clearData()">Clear database</button>
+            </li>
+           
+      </ul>
+ 
+  </div>
+    <script>
+       window.addEventListener("load", function(){
+           console.log((Book.instances));
+         
+       });     
+    </script>
+  
+</body>
+</html> 

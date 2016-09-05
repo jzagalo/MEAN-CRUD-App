@@ -1,0 +1,34 @@
+$family-font: 'Open Sans', sans-serif;
+$bodyColor:rgb(218, 214, 214);
+body{
+	font-family: $family-font;
+	background-color: $bodyColor;
+	-webkit-font-smoothing:antialiased;
+	margin-top: 20px;
+	overflow-y: hidden;
+
+}
+ul#List{
+	margin-top: 30px;
+	margin-left:0em;	
+}
+ul#List li{	
+	margin-left: 0em;
+}
+ul#List .button{
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-weight:300;
+
+}
+h1#header{
+	color:teal;
+	font-weight:300;
+}
+p#display{
+	text-align:center;
+}
+form#Book{
+	width:50%;
+	margin:2% auto;
+}

@@ -1,0 +1,56 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #dad6d6;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 20px;
+  /*overflow-y: hidden; */}
+
+ul#List {
+  margin-top: 30px;
+  margin-left: 0em; }
+
+ul#List li {
+  margin-left: 0em; }
+
+ul#List .button {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 300; }
+
+h1#header {
+  color: teal;
+  font-weight: 300; }
+
+p#display {
+  text-align: center; }
+
+form#Book {
+  width: 50%;
+  margin: 2% auto; }
+
+select{
+  -moz-appearance:toolbarbutton;
+}
+
+.ui.table thead th { text-transform: uppercase;
+font-weight: 800;}
+.ui.form > p label{
+text-transform: uppercase;
+font-weight: 800;
+}
+
+div.pure-control-group > label{
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+}
+legend, label{
+  text-transform: uppercase;
+  font-weight: 800;
+
+}
+.ui.form .fields{
+  margin-top: 1em;
+  text-transform: Uppercase;
+}
+/*# sourceMappingURL=custom.css.map */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Minimal JS front-end App Example</title>   
+   <link rel="stylesheet" href="semantic/semantic.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/custom.css"> 
+  <script src="lib/browserShims.js"></script>
+  <script src="lib/util.js"></script>
+  <script src="lib/errorTypes.js"></script>
+  <script src="lib/Enumeration.js"></script>
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/Book.js"></script>
+  <script src="src/view/createBook.js"></script>
+
+  <script>
+   window.addEventListener("load", function (){
+    pl.view.createBook.setupUserInterface();
+     var display = document.querySelector('p#display');
+     if(display){ display.style.display = 'none';}
+    
+ 
+   });
+  </script>
+   
+</head>
+<body>
+<div class="ui container">
+  
+  <h1 class="ui center aligned dividing header" id="header" >Public Library: Create a new book record</h1>
+  <p id="display" class="ui center aligned teal message" ></p>
+  <form id="Book" class="ui form">
+    <div class="field">
+    <p><label>ISBN: <input name="isbn" /></label></p>
+    </div>
+    <p><label>Title: <input name="title" /></label></p>
+    <div class="pure-control-group">
+      <label for="originalLanguage">Original language</label>
+      <select id="originalLanguage" name="originalLanguage"></select>
+    </div>
+    <div class="pure-control-group">
+      <label for="otherAvailableLanguages">Other available languages</label>
+      <select id="otherAvailableLanguages" name="otherAvailableLanguages" 
+              multiple="multiple"></select>
+    </div>
+    <fieldset class="fields" data-bind="category">
+      <legend>Category</legend>
+    </fieldset>
+    <fieldset class="fields" data-bind="publicationForms">
+      <legend>Publication forms</legend>
+    </fieldset>
+    <div class="pure-controls">
+     
+     
+    </div>
+    <p><button type="button" name="commit" class="ui teal button">Save</button></p>
+  </form>
+  <nav><a href="index.html">Back to main menu</a></nav>
+  </div>
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="semantic/semantic.js"></script>
+  <script>
+  (function(){
+   $('.ui .radio .checkbox').checkbox();
+   $('.ui .checkbox').checkbox();
+
+   })();
+  </script>
+</body>
+</html>
