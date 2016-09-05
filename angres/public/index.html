@@ -1,0 +1,56 @@
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-controller="PostCtrl">
+    <div class="container">
+	<form action="?">
+		<table class="table table-bordered">
+		 <tr><th> Title</th>
+		 <th>Author</th>
+		 <th> Date</th>
+		 <th>Message</th></tr>	
+			<tr ng-if="editable">
+				<td><input type="text" ng-model="post.title"></td>
+				<td><input type="text" ng-model="post.author"></td>
+				<td><input type="text" ng-model="post.date"></td>
+				<td><textarea ng-model="post.message"></textarea></td>				
+				<td><button type="submit" ng-click="Update(post._id, post)"> Update</button></td>
+				<td><a class="btn btn-danger" ng-click="cancel()"> Cancel</a></td>
+			</tr>	
+			
+			<tr ng-repeat="post in posts track by $index">
+				<td>{{post.title}}</td>
+				<td>{{post.author}}</td>
+				<td> {{post.date }}</td>
+				<td>{{post.message}}</td>
+				<td><button ng-click="deletePost(post._id)">Delete Post</button></td>
+				<td><a ng-click="editPost()" class="btn btn-primary">Edit Post</a></td>
+				
+			</tr>
+			<tr ng-if="!editable">
+				<td><input type="text" ng-model="post.title"></td>
+				<td><input type="text" ng-model="post.author"></td>
+				<td><input type="text" ng-model="post.date"></td>
+				<td><textarea ng-model="post.message"></textarea></td>
+				<td><button ng-click="addPost()"> Add</button></td>	
+				<td><button type="submit" ng-click="Update(post._id, post)"> Update</button></td>	
+
+			</tr>
+
+		</table>
+	</form>
+			
+			
+
+	
+	</div>
+	
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="controller/controller.js"></script>
+
+</body>
+</html>
